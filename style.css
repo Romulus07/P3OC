@@ -239,6 +239,7 @@ header h2 {
 
 .box h3 {
   text-align: center;
+  font-size: 30px;
 }
 
 .box h3 i {
@@ -256,6 +257,8 @@ header h2 {
   margin: auto;
   color: #c88a68;
   font-size: 30px;
+  padding-bottom: 30px;
+  padding-top: 60px;
 }
 
 .box h4 {
@@ -270,6 +273,12 @@ header h2 {
 
 .box h5 {
   text-align: center;
+  font-size: 22px;
+  padding-bottom: 40px;
+}
+
+.box h5 i {
+  margin-right: 10px;
 }
 
 .boxe-list {
@@ -277,6 +286,12 @@ header h2 {
   display: -ms-flexbox;
   display: flex;
   padding-right: 40px;
+}
+
+.boxe-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #color-bg {

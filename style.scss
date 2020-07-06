@@ -204,6 +204,7 @@ body{
     }
     h3{
       @include title;
+      font-size: 30px;
       i{
         height:30px;
         width:30px;
@@ -213,6 +214,8 @@ body{
         margin: auto;
         color: $gold-note;
         font-size: 30px;
+        padding-bottom: 30px;
+        padding-top: 60px;
     }
   }
     h4{
@@ -226,12 +229,21 @@ body{
 
     h5{
       @include title;
+      font-size: 22px;
+      padding-bottom: 40px;
+      i{
+        margin-right: 10px;
+      }
     }
+    
   }
 
   .boxe-list{
     display: flex;
     padding-right: 40px;
+    ul{
+      display: flex;
+    }
   }
   #color-bg{
     background-color: $bg-note;
