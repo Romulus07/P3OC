@@ -16,13 +16,6 @@ $gold-note:rgb(200, 138, 104);
 $blue:rgb(99, 129, 189);
 $brown:rgb(98, 61, 65);
 
-$font-note:devonshire;
-$font-chic:source serif pro;
-$font-dish:dancing script;
-$font-taste:kaushan script;
-$font-menu:caveat;
-
-
 body{
     font-size: 16px;
     margin: 0;
@@ -44,7 +37,7 @@ body{
     justify-content: center;
     align-items:center ;
     margin: 0;
-    font-style: montserrat;
+    font-family: 'Times New Roman', Times, serif;
     a{
     text-decoration: none;
     color:$gold;
@@ -99,28 +92,35 @@ body{
   .items-note{
     background-color:$bg-note ;
     color: $brown;
-    font-family:$font-note;
+    font-family: 'Devonshire', cursive;
+    .kalam{
+      font-family: 'Kalam', cursive;
+      }
   }
   .items-chic{
     background-color: $bg-chic;
-    font-family: $font-chic;
-
+    font-family: 'Kurale', serif;
+    .vidaloka{
+    font-family: 'Vidaloka', serif;
+    color: rgb(194, 120, 117);
+    }
   }
   .items-dish{
     background-color: $bg-delice;
-    font-family: $font-dish;
+    font-family: 'Dancing Script', cursive;
+    .kalam{
+      font-family: 'Kalam', cursive;
+      color: rgb(41, 152, 251);
+      }
   }
   .items-taste{
     background-color: $bg-gout;
-    font-family: $font-taste;
+    font-family: 'Kaushan Script', cursive;
+    .kalam{
+      font-family: 'Kalam', cursive;
+      color: rgb(114, 191, 86);
+      }
   }
-  .caveat{
-    font-style: caveat;
-  }
-  .serif{
-    font-style: sans serif pro;
-  }
-}
 /* FOOTER*/
 #wait{
   text-align: center;
@@ -132,10 +132,11 @@ body{
   margin: auto;
   font-style: montserrat;
 }
+
   footer{
     background-color: $green;
     height:90px;
-    font-style: montserrat;
+    font-family: sans-serif;
     .legale{
       float: left;
       margin-left: 30px;
@@ -175,9 +176,7 @@ body{
         width: 300px;
       }
     }
-    
   }
-
   /*NOTE*/
 
   @mixin menu {
@@ -195,6 +194,7 @@ body{
   
   header h2{
     @include title;
+    font-size: 30px;
   }
 
   .box{
@@ -218,14 +218,11 @@ body{
         padding-top: 60px;
     }
   }
-    h4{
-      @include title
-      font-size:20px;
-    }
 
-    h4:hover {
-       text-decoration: underline; color: #224061;
-       }
+    h4{
+      font-size: 20px;
+      @include title;
+    }
 
     h5{
       @include title;
@@ -236,7 +233,6 @@ body{
       }
     }
     
-  }
 
   .boxe-list{
     display: flex;
@@ -245,6 +241,7 @@ body{
       display: flex;
     }
   }
+
   #color-bg{
     background-color: $bg-note;
     width: 100%;
@@ -253,34 +250,19 @@ body{
   #color-taste{
     background-color: $bg-gout;
     width: 100%;
+    padding-top: 100px; 
   }
 
   #color-chic{
     width: 100%;
     background-color: $bg-chic;
+    padding-top: 100px;
   }
 
   #color-dish{
     width: 100%;
     background-color: $bg-delice;
+    padding-top: 100px;
   }
-
-  /* MENTION */
-
-  #page{
-    text-align: center;
-    align-items: center;
+}
   }
-
-
-   
-
-
-
-   
-  
-
-  
-
-
-

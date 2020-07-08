@@ -33,7 +33,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  font-style: montserrat;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .title a {
@@ -122,31 +122,45 @@ body {
 .menu .items-note {
   background-color: #fcdfdb;
   color: #623d41;
-  font-family: devonshire;
+  font-family: 'Devonshire', cursive;
+}
+
+.menu .items-note .kalam {
+  font-family: 'Kalam', cursive;
 }
 
 .menu .items-chic {
   background-color: #fff5fe;
-  font-family: source serif pro;
+  font-family: 'Kurale', serif;
+  font-family: 'Vidaloka', serif;
 }
+
+.menu .items-chic .vidaloka{
+  font-family: 'Vidaloka', serif;
+  color: rgb(194, 120, 117);
+  }
 
 .menu .items-dish {
   background-color: #eaeaeb;
-  font-family: dancing script;
+  font-family: 'Dancing Script', cursive;
+
+}
+
+.menu .items-dish .kalam {
+  font-family: 'Kalam', cursive;
+  color: rgb(41, 152, 251);
 }
 
 .menu .items-taste {
   background-color: #fdfffd;
-  font-family: kaushan script;
+  font-family: 'Kaushan Script', cursive;
 }
 
-.menu .caveat {
-  font-style: caveat;
+.menu .items-taste .kalam {
+  font-family: 'Kalam', cursive;
+  color: rgb(114, 191, 86);
 }
 
-.menu .serif {
-  font-style: sans serif pro;
-}
 
 /* FOOTER*/
 #wait {
@@ -160,10 +174,11 @@ body {
   font-style: montserrat;
 }
 
+
 footer {
   background-color: #569c84;
   height: 90px;
-  font-style: montserrat;
+  font-family: sans-serif;
 }
 
 footer .legale {
@@ -182,6 +197,17 @@ footer .contact {
   text-decoration: none;
   color: #fdcb46;
   padding-top: 30px;
+}
+
+footer a:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 @media screen and (max-width: 680px) {
@@ -221,6 +247,7 @@ footer .contact {
 /*NOTE*/
 header h2 {
   text-align: center;
+  font-size: 30px;
 }
 
 .box {
@@ -231,10 +258,12 @@ header h2 {
   margin-right: auto;
   line-height: 2.5em;
   font-style: italic;
+  margin-bottom: 100px;
 }
 
 .box li {
   list-style: none;
+  font-family: 'Kalam', cursive;
 }
 
 .box h3 {
@@ -269,6 +298,7 @@ header h2 {
 .box h4:hover {
   text-decoration: underline;
   color: #224061;
+  
 }
 
 .box h5 {
@@ -294,6 +324,7 @@ header h2 {
   display: flex;
 }
 
+
 #color-bg {
   background-color: #fcdfdb;
   width: 100%;
@@ -302,23 +333,32 @@ header h2 {
 #color-taste {
   background-color: #fdfffd;
   width: 100%;
+  padding-top: 100px;
 }
 
 #color-chic {
   width: 100%;
   background-color: #fff5fe;
+  padding-top: 100px;
 }
 
 #color-dish {
   width: 100%;
   background-color: #eaeaeb;
+  padding-top: 100px;
 }
 
 /* MENTION */
-#page {
+#page{
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
+.text-chic1{
+  color: rgb(211, 144, 75);
+}
+.text-chic2{
+  color: rgb(167, 106, 155);
+}
+.text-chic3{
+  color: rgb(110, 76, 204);
+}
