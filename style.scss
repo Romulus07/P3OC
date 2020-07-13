@@ -95,30 +95,49 @@ body{
     font-family: 'Devonshire', cursive;
     .kalam{
       font-family: 'Kalam', cursive;
+      font-size: 30px;
       }
   }
   .items-chic{
     background-color: $bg-chic;
     font-family: 'Kurale', serif;
+    .gradient-1{
+      background: linear-gradient(to right, #B96E4C, #9E62C4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     .vidaloka{
     font-family: 'Vidaloka', serif;
     color: rgb(194, 120, 117);
+    font-size: 30px;
     }
   }
   .items-dish{
     background-color: $bg-delice;
     font-family: 'Dancing Script', cursive;
+    .gradient-2{
+      background: linear-gradient(to right, #4C4CF1, #86C2FA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
     .kalam{
       font-family: 'Kalam', cursive;
-      color: rgb(41, 152, 251);
+      color:#4C4CF1 ;
+      font-size: 30px;
       }
   }
   .items-taste{
     background-color: $bg-gout;
     font-family: 'Kaushan Script', cursive;
+    .gradient-3{
+      background: linear-gradient(to right, #43983C, #BBFC7C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
     .kalam{
       font-family: 'Kalam', cursive;
-      color: rgb(114, 191, 86);
+      color: #43983C;
+      font-size: 30px;
       }
   }
 }
@@ -127,11 +146,13 @@ body{
   text-align: center;
   color: $gold;
   background-color: $green;
-  font-size:20px ;
+  font-size:30px ;
   margin-bottom: 100px;
-  width: 200px;
+  width: 300px;
   margin: auto;
   font-style: montserrat;
+  border-radius: 5px;
+  height: 40px;
 }
 
   footer{
@@ -141,6 +162,7 @@ body{
     height:90px;
     padding: 0 20px;
     font-family: sans-serif;
+    margin-top: 50px;
     .footer_link{
       font-size: 20px;
       text-decoration: none;
@@ -299,4 +321,23 @@ body{
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+#page{
+  text-align: center;
+}
+
+.hr-black{
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.hr-black::before,
+.hr-black::after{
+  border-top: 0.625em;
+  content:"";
+  flex: 1;
+  margin: 0.5em;
+}
+
 

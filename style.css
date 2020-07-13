@@ -124,6 +124,7 @@ body {
 
 .menu .items-note .kalam {
   font-family: 'Kalam', cursive;
+  font-size: 30px;
 }
 
 .menu .items-chic {
@@ -131,9 +132,17 @@ body {
   font-family: 'Kurale', serif;
 }
 
+.menu .items-chic .gradient-1 {
+  background: -webkit-gradient(linear, left top, right top, from(#B96E4C), to(#9E62C4));
+  background: linear-gradient(to right, #B96E4C, #9E62C4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .menu .items-chic .vidaloka {
   font-family: 'Vidaloka', serif;
   color: #c27875;
+  font-size: 30px;
 }
 
 .menu .items-dish {
@@ -141,9 +150,17 @@ body {
   font-family: 'Dancing Script', cursive;
 }
 
+.menu .items-dish .gradient-2 {
+  background: -webkit-gradient(linear, left top, right top, from(#4C4CF1), to(#86C2FA));
+  background: linear-gradient(to right, #4C4CF1, #86C2FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .menu .items-dish .kalam {
   font-family: 'Kalam', cursive;
-  color: #2998fb;
+  color: #4C4CF1;
+  font-size: 30px;
 }
 
 .menu .items-taste {
@@ -151,9 +168,17 @@ body {
   font-family: 'Kaushan Script', cursive;
 }
 
+.menu .items-taste .gradient-3 {
+  background: -webkit-gradient(linear, left top, right top, from(#43983C), to(#BBFC7C));
+  background: linear-gradient(to right, #43983C, #BBFC7C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .menu .items-taste .kalam {
   font-family: 'Kalam', cursive;
-  color: #72bf56;
+  color: #43983C;
+  font-size: 30px;
 }
 
 /* FOOTER*/
@@ -161,11 +186,13 @@ body {
   text-align: center;
   color: #fdcb46;
   background-color: #569c84;
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 100px;
-  width: 200px;
+  width: 300px;
   margin: auto;
   font-style: montserrat;
+  border-radius: 5px;
+  height: 40px;
 }
 
 footer {
@@ -179,6 +206,7 @@ footer {
   height: 90px;
   padding: 0 20px;
   font-family: sans-serif;
+  margin-top: 50px;
 }
 
 footer .footer_link {
@@ -449,5 +477,29 @@ header h2 {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
             transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+#page {
+  text-align: center;
+}
+
+.hr-black {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.hr-black::before,
+.hr-black::after {
+  border-top: 0.625em;
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0.5em;
 }
 /*# sourceMappingURL=style.css.map */
