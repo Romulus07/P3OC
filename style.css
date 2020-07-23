@@ -392,19 +392,29 @@ header h2 {
   font-size: 30px;
 }
 
+main {
+  width: 70%;
+  margin: auto;
+}
+
 .box {
-  width: 60%;
   -webkit-box-shadow: 0px 0px 10px -5px black;
           box-shadow: 0px 0px 10px -5px black;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.2em;
-  font-style: italic;
+  line-height: 1.1em;
+  font-style: lighter;
   font-family: 'Kalam', cursive;
+  line-height: normal;
+}
+
+.box ul {
+  padding: 0;
 }
 
 .box li {
   list-style: none;
+  white-space: nowrap;
 }
 
 .box h3 {
@@ -434,11 +444,6 @@ header h2 {
 }
 
 h4 {
-  font-size: 20px;
-  text-align: center;
-}
-
-h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,21 +453,106 @@ h4 {
           flex-direction: row;
 }
 
-h4:before, h4:after {
+h4 span {
+  position: relative;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+h4 span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border: 0px solid transparent;
+  width: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+h4 span:hover::before {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.note::before, .note::after {
   content: "";
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
-  border-bottom: 1px solid #000;
+  border-bottom: 5px solid #000;
   margin: auto;
 }
 
-h4:before {
+h4::before {
   margin-right: 10px;
 }
 
-h4:after {
+h4::after {
   margin-left: 10px;
+}
+
+.taste::before, .taste::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid green;
+  margin: auto;
+}
+
+.dish-1::before, .dish-1::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid blue;
+  margin: auto;
+}
+
+.dish-2:before, .dish-2:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid #3388FF;
+  margin: auto;
+}
+
+.dish-3:before, .dish-3:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid #33C0FF;
+  margin: auto;
+}
+
+.chic-1:before, .chic-1:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid #c77529;
+  margin: auto;
+}
+
+.chic-2:before, .chic-2:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid #a56799;
+  margin: auto;
+}
+
+.chic-3:before, .chic-3:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 5px solid #6e4ccc;
+  margin: auto;
 }
 
 h5 {
@@ -482,13 +572,28 @@ h5 i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 40px;
+  padding: right 0;
   width: 100%;
   line-height: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.boxe-list ul {
-  width: 450px;
+.boxe-list .price-1 {
+  display: none;
+}
+
+.boxe-list .name {
+  width: 500px;
+}
+
+.boxe-list .name ul {
+  padding-left: 0;
+}
+
+.boxe-list .name .price {
+  width: 50px;
 }
 
 #color-bg {
@@ -509,7 +614,8 @@ h5 i {
 }
 
 #color-bg .price {
-  margin-left: 40px;
+  width: 50px;
+  font-weight: bold;
 }
 
 #color-taste {
@@ -524,7 +630,7 @@ h5 i {
 }
 
 #color-taste .price {
-  margin-left: 40px;
+  font-weight: bold;
 }
 
 #color-chic {
@@ -539,10 +645,6 @@ h5 i {
   font-family: 'Kurale', serif;
 }
 
-#color-chic .price {
-  margin-left: 40px;
-}
-
 #color-dish {
   width: 100%;
   background-color: #eaeaeb;
@@ -555,7 +657,6 @@ h5 i {
 }
 
 #color-dish .price {
-  margin-left: 40px;
   font-style: bold;
 }
 
@@ -580,8 +681,19 @@ h5 i {
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 1042px) {
-  .boxe-list {
+/* MENTION LEGALE*/
+#page {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .box {
+    text-align: center;
+  }
+  .price {
+    display: none;
+  }
+  .price-1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -590,10 +702,5 @@ h5 i {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-
-/* MENTION LEGALE*/
-#page {
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

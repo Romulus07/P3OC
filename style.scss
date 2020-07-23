@@ -22,11 +22,11 @@ body{
     font-size: 16px;
     margin: 0;
     padding: 0;
-    
   }
 
   /*MENU PRINCIPAL PAGE 1*/
  
+
   .title{
     text-align: center;
     color:$gold;
@@ -50,7 +50,9 @@ body{
   }
 
 
+
   /*MENU*/
+
   .container{
     display: grid;
     grid-row-gap: 50px;
@@ -262,12 +264,11 @@ footer{
 
 
   @mixin menu {
-    width: 60%;
     box-shadow:  0px 0px 10px -5px black;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.2em;
-    font-style: italic;
+    line-height: 1.1em;
+    font-style: lighter;
     font-family: 'Kalam', cursive;
   }
 
@@ -280,10 +281,20 @@ footer{
     font-size: 30px;
   }
 
+  main{
+    width: 70%;
+    margin: auto;
+  }
+
   .box{
     @include menu;
+    line-height: normal;
+    ul{
+      padding: 0;
+    }
     li{
       list-style: none;
+      white-space: nowrap;
     }
     h3{
       @include title;
@@ -304,31 +315,97 @@ footer{
         margin-bottom: 20px;
     }
   }
-      
-
-    h4{
-      font-size: 20px;
-      @include title;
-    }
-
+    
+  
     h4 {
       display: flex;
       flex-direction: row;
     }
-    h4:before, h4:after{
+
+  h4 span{
+    position:relative;
+    padding: 0 20px;
+    display: inline-block;
+  }
+
+  h4 span::before{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      border:0px solid transparent;
+      width:0;
+      transition: all 1s ease;
+  }
+  h4 span:hover::before{
+      border-bottom:1px solid black;
+      width:100%;
+
+  }
+
+    .note::before, .note::after{
       content: "";
       flex: 1 1;
-      border-bottom: 1px solid #000;
+      border-bottom: 5px solid #000;
       margin: auto;
     }
-    h4:before {
-      margin-right: 10px
-    }
-    h4:after {
-      margin-left: 10px
+
+    h4::before {
+      margin-right: 10px;
     }
 
+    h4::after {
+      margin-left: 10px;
+    }
+
+    .taste::before, .taste::after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid green;
+      margin: auto;
+    }
+
+    .dish-1::before, .dish-1::after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid blue;
+      margin: auto;
+    }
     
+    .dish-2:before, .dish-2:after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid #3388FF;
+      margin: auto;
+    }
+
+    .dish-3:before, .dish-3:after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid #33C0FF;
+      margin: auto;
+    }
+
+    .chic-1:before, .chic-1:after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid #c77529;
+      margin: auto;
+    }
+
+    .chic-2:before, .chic-2:after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid #a56799;
+      margin: auto;
+    }
+
+    .chic-3:before, .chic-3:after{
+      content: "";
+      flex: 1 1;
+      border-bottom: 5px solid #6e4ccc;
+      margin: auto;
+    }
 
     h5{
       @include title;
@@ -345,11 +422,21 @@ footer{
 
   .boxe-list{
     display: flex;
-    padding-right: 40px;
+    padding: right 0;;
     width: 100%;
     line-height: 3em;
-    ul{
-      width: 450px;
+    justify-content: space-between;
+    .price-1{
+      display: none;
+    }
+    .name{
+      width: 500px;
+      ul{
+        padding-left: 0;
+      }
+      .price{
+        width: 50px;
+      }
     }
   }
 
@@ -365,9 +452,11 @@ footer{
       font-family: 'Devonshire', cursive;
     }
     .price{
-      margin-left: 40px;
+    width: 50px;
+    font-weight: bold;
     }
   }
+
 
   #color-taste{
     background-color: $bg-gout;
@@ -377,9 +466,10 @@ footer{
     padding-left: 40px;
     height: max-content;
     .price{
-      margin-left: 40px;
+      font-weight: bold;
     }
   }
+
 
   #color-chic{
     width: 100%;
@@ -389,10 +479,8 @@ footer{
     padding-right: 40px;
     height: max-content;
     font-family: 'Kurale', serif;
-    .price{
-      margin-left: 40px;
-    }
   }
+
 
   #color-dish{
     width: 100%;
@@ -402,10 +490,10 @@ footer{
     padding-left: 40px;
     height: max-content;
     .price{
-      margin-left: 40px;
       font-style: bold;
     }
 }
+
 
 .gradient-1{
   background: linear-gradient(to right, #B96E4C, #9E62C4);
@@ -427,14 +515,7 @@ footer{
 
 
 
-    @media screen and (max-width: 1042px) {
-      .boxe-list{
-      display: flex;
-      flex-direction: column;
-      }
-    }
-
-
+   
 
 /* MENTION LEGALE*/
 
@@ -446,3 +527,15 @@ footer{
 
 
 
+@media screen and (max-width: 800px) {
+  .box{
+    text-align: center;
+  }
+  .price{
+    display: none;
+  }
+  .price-1{
+    display: flex;
+    flex-direction: column;
+  }
+}
