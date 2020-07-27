@@ -3,6 +3,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* define variables for the primary colors */
 
 $bg-chic:	rgb(255, 245, 254);
@@ -51,7 +53,10 @@ body{
 
 
 
+
   /*MENU*/
+
+
 
   .container{
     display: grid;
@@ -165,6 +170,8 @@ body{
 }
 
 
+
+/* ANIMATION LOADING */
 @keyframes loading{
   0%{
     opacity: 0;
@@ -186,6 +193,10 @@ body{
   animation:loading 1s linear 0.7s infinite ;
 }
 
+
+
+
+
 footer{
   display:flex;
   justify-content: space-between;
@@ -201,6 +212,10 @@ footer{
     padding-top: 30px;
   }  
 }
+
+
+
+/* ANIMATION FOOTER SHAKE*/
 
 
 .footer_link:hover {
@@ -221,11 +236,6 @@ footer{
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-
-
-  
-
-
 
 
   /* MEDIA SCREEN FIRST PAGE*/
@@ -254,14 +264,7 @@ footer{
     }
   }
 
-
-
-
-
-
   /*MENU INDIVIDUAL*/
-
-
 
   @mixin menu {
     box-shadow:  0px 0px 10px -5px black;
@@ -316,7 +319,6 @@ footer{
     }
   }
     
-  
     h4 {
       display: flex;
       flex-direction: row;
@@ -357,6 +359,26 @@ footer{
     h4::after {
       margin-left: 10px;
     }
+
+    
+    .note span{
+      position:relative;
+       }
+
+    .note span::before{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      border:0px solid transparent;
+      width:0;
+      transition: all 1s ease;
+      }
+
+    .note span:hover::before{
+      border-bottom:1px solid black;
+      width:100%;
+      }
 
     .taste::before, .taste::after{
       content: "";
@@ -422,13 +444,10 @@ footer{
 
   .boxe-list{
     display: flex;
-    padding: right 0;;
+    padding: right 0;
     width: 100%;
     line-height: 3em;
     justify-content: space-between;
-    .price-1{
-      display: none;
-    }
     .name{
       width: 500px;
       ul{
@@ -438,6 +457,15 @@ footer{
         width: 50px;
       }
     }
+  }
+  .color1{
+   color: #c77529;
+  }
+  .color2{
+    color: #a56799;
+  }
+  .color3{
+    color: #6e4ccc;
   }
 
   #color-bg{
@@ -457,38 +485,30 @@ footer{
     }
   }
 
-
-  #color-taste{
-    background-color: $bg-gout;
+  @mixin box-padd-height {
     width: 100%;
     padding-top: 100px; 
     padding-right: 40px;
     padding-left: 40px;
     height: max-content;
+  }
+
+  #color-taste{
+    background-color: $bg-gout;
+    @include box-padd-height;
     .price{
       font-weight: bold;
     }
   }
-
-
   #color-chic{
-    width: 100%;
+    @include box-padd-height;
     background-color: $bg-chic;
-    padding-top: 100px;
-    padding-left: 40px;
-    padding-right: 40px;
-    height: max-content;
     font-family: 'Kurale', serif;
   }
 
-
   #color-dish{
-    width: 100%;
+    @include box-padd-height;
     background-color: $bg-delice;
-    padding-top: 100px;
-    padding-right: 40px;
-    padding-left: 40px;
-    height: max-content;
     .price{
       font-style: bold;
     }
@@ -527,15 +547,82 @@ footer{
 
 
 
-@media screen and (max-width: 800px) {
-  .box{
-    text-align: center;
+@media screen and (max-width: 1000px) {
+body{
+  font-size: 8px;
+}
+  main{
+    width: 300px;
+    margin: auto;
   }
-  .price{
-    display: none;
+  .boxe-list{
+    justify-content: center;
   }
-  .price-1{
-    display: flex;
-    flex-direction: column;
+  footer {
+    .mention{
+      margin-right: 30px;
+    }
   }
+}
+
+
+
+
+@media screen and (max-width: 320px){
+  body{
+    font-size: 7px;
+    width: 320px;
+  }
+  main{
+    width: 100%;
+    margin: auto;
+  }
+  .container{
+    margin:auto;
+  }
+  .menu{
+    width: 100%;
+  }
+  .boxe-list{
+    justify-content: center;
+  }
+  footer{
+    margin-top: 0;
+  .mention{
+    margin-right: 40px;
+  }
+}
+}
+
+
+
+
+
+@mixin height-font {
+  height: 1000px;
+  font-size: 14px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+  main{
+    width: 100%;
+  }
+  #color-taste  #color-chic #color-dish #color-bg{
+    @include height-font;
+  }
+  .boxe-list{
+    justify-content: center;
+  }
+  
+  footer{
+    margin-top: 100px;
+    .mention{
+      margin-right: 40px;
+    }
+  }
+
 }
