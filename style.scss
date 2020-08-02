@@ -89,7 +89,6 @@ body{
     &:hover{
       transform: scale(1.15);
       opacity:0.7;
-    }
   }
   i{
   height:30px;
@@ -131,11 +130,18 @@ body{
       background: linear-gradient(to right, #4C4CF1, #86C2FA);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      cursor: pointer;
+      transform: scale(1);
+      transition: all 400ms ease;
+      &:hover{
+        transform: scale(1.15);
+        opacity:0.7;
       }
     .kalam{
       font-family: 'Kalam', cursive;
       color:#4C4CF1 ;
       font-size: 30px;
+      
       }
   }
   .items-taste{
@@ -481,7 +487,6 @@ footer{
     }
     .price{
     width: 50px;
-    font-weight: bold;
     }
   }
 
@@ -504,6 +509,12 @@ footer{
     @include box-padd-height;
     background-color: $bg-chic;
     font-family: 'Kurale', serif;
+    .color1 + .price > ul{
+      color:#c77529;
+    }
+    .color2 + .price ul {
+      color: #a56799;
+    }
   }
 
   #color-dish{
@@ -557,6 +568,7 @@ body{
   }
   .boxe-list{
     justify-content: center;
+    width: initial;
   }
   footer {
     .mention{
@@ -571,7 +583,7 @@ body{
 @media screen and (max-width: 320px){
   body{
     font-size: 7px;
-    width: 320px;
+    width:100%;
   }
   main{
     width: 100%;
@@ -584,7 +596,8 @@ body{
     width: 100%;
   }
   .boxe-list{
-    justify-content: center;
+    justify-content: space-between;
+  
   }
   footer{
     margin-top: 0;
@@ -615,7 +628,10 @@ body{
     @include height-font;
   }
   .boxe-list{
-    justify-content: center;
+    justify-content: space-between;
+    .name{
+      width: initial;
+    }
   }
   
   footer{
@@ -624,5 +640,4 @@ body{
       margin-right: 40px;
     }
   }
-
 }

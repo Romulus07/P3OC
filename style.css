@@ -191,7 +191,7 @@ body {
   margin-bottom: 100px;
   width: 300px;
   margin: auto;
-  font-style: montserrat;
+  font-family: montserrat;
   border-radius: 5px;
   height: 40px;
 }
@@ -404,7 +404,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.1em;
-  font-style: lighter;
+  font-weight: lighter;
   font-family: 'Kalam', cursive;
   line-height: normal;
 }
@@ -593,7 +593,7 @@ h5 i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: right 0;
+  padding-right: 0;
   width: 100%;
   line-height: 3em;
   -webkit-box-pack: justify;
@@ -644,7 +644,6 @@ h5 i {
 
 #color-bg .price {
   width: 50px;
-  font-weight: bold;
 }
 
 #color-taste {
@@ -674,6 +673,14 @@ h5 i {
   font-family: 'Kurale', serif;
 }
 
+#color-chic .color1 + .price > ul {
+  color: #c77529;
+}
+
+#color-chic .color2 + .price ul {
+  color: #a56799;
+}
+
 #color-dish {
   width: 100%;
   padding-top: 100px;
@@ -686,7 +693,7 @@ h5 i {
 }
 
 #color-dish .price {
-  font-style: bold;
+  font-weight: bold;
 }
 
 .gradient-1 {
@@ -727,6 +734,7 @@ h5 i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: initial;
   }
   footer .mention {
     margin-right: 30px;
@@ -736,7 +744,7 @@ h5 i {
 @media screen and (max-width: 320px) {
   body {
     font-size: 7px;
-    width: 320px;
+    width: 100%;
   }
   main {
     width: 100%;
@@ -749,9 +757,9 @@ h5 i {
     width: 100%;
   }
   .boxe-list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   footer {
     margin-top: 0;
@@ -770,9 +778,12 @@ h5 i {
     font-size: 14px;
   }
   .boxe-list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .boxe-list .name {
+    width: initial;
   }
   footer {
     margin-top: 100px;
