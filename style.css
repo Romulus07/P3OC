@@ -45,7 +45,7 @@ body {
 }
 
 /*MENU*/
-.container {
+#container {
   display: -ms-grid;
   display: grid;
   grid-row-gap: 50px;
@@ -241,6 +241,10 @@ footer {
   padding: 0 20px;
   font-family: sans-serif;
   margin-top: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 footer .footer_link {
@@ -251,6 +255,7 @@ footer .footer_link {
 }
 
 /* ANIMATION FOOTER SHAKE*/
+
 .footer_link:hover {
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
