@@ -19,7 +19,6 @@ $blue:rgb(99, 129, 189);
 $brown:rgb(98, 61, 65);
 
 
-
 body{
     font-size: 16px;
     margin: 0;
@@ -52,8 +51,6 @@ body{
   }
 
 
-
-
   /*MENU*/
 
 
@@ -83,12 +80,17 @@ body{
     height: 100%;
     text-decoration: none;
     display: flex;
+    .transform{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     cursor: pointer;
     transform: scale(1);
     transition: all 400ms ease;
     &:hover{
       transform: scale(1.15);
       opacity:0.7;
+    }
   }
   i{
   height:30px;
