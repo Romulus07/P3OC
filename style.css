@@ -630,9 +630,7 @@ h5 i {
   padding-left: 0;
 }
 
-.boxe-list .name .price {
-  width: 50px;
-}
+
 
 .color1 {
   color: #c77529;
@@ -663,9 +661,6 @@ h5 i {
   font-family: 'Devonshire', cursive;
 }
 
-#color-bg .price {
-  width: 50px;
-}
 
 #color-taste {
   background-color: #fdfffd;
@@ -855,5 +850,11 @@ h5 i {
     margin-right: 40px;
   }
 
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
