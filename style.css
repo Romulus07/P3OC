@@ -402,7 +402,7 @@ footer .footer_link {
     margin-bottom: 30px;
   }
   .menu a {
-    width: 300px;
+    width: 100%;
   }
 }
 
@@ -797,6 +797,10 @@ h5 i {
     padding-left: 10px;
   }
 
+  .box{
+    margin-bottom: 100px;
+  }
+  
   .boxe-list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
